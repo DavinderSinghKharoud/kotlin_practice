@@ -1,7 +1,21 @@
 import kotlin.math.abs
 
 fun main() {
-    whenExpression()
+    whileLoop()
+}
+
+fun whileLoop() {
+    var x = 0
+    while (x < 10) {
+        println("x = $x")
+        x += 3
+    }
+
+    //Will run at least one
+    do {
+        println("x = $x")
+        x -= 3
+    } while (x > 0)
 }
 
 fun whenExpression() {
@@ -38,7 +52,7 @@ fun whenExpression() {
 
 }
 
-fun ifExpression(){
+fun ifExpression() {
     /*
     1] If is an expression not an statement, which means it return an value
     2] Result of the If expression can be assigned to a variable
@@ -46,13 +60,13 @@ fun ifExpression(){
      */
     val small = 1
     val big = 2
-    val lowest = if(small < big) small else big
+    val lowest = if (small < big) small else big
     println(lowest)
 
-    val smallNumberCheck = if(small > 20){
+    val smallNumberCheck = if (small > 20) {
         println("Small number is greater than 20")
         true
-    }else{
+    } else {
         println("Small number is less than 20")
         false
     }

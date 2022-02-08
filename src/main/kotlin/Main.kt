@@ -1,7 +1,33 @@
 import kotlin.math.abs
 
 fun main() {
-    whileLoop()
+    forLoop()
+}
+
+fun forLoop() {
+    for (item in 1..10) {
+        //item is immutable
+        //1..10 is inclusive
+        print("$item ")
+    }
+
+    for (char in "Hello") {
+        print("$char ")
+    }
+    println()
+    for (item in 10.rangeTo(20)) {
+        print("$item ")
+    }
+    println()
+
+    for ((index, item) in 10.rangeTo(20).withIndex()) {
+        println("$item at index $index")
+    }
+
+    val arr = arrayListOf(10, 20, 30, 40, 50)
+    for (index in arr.indices) {
+        println("At index $index is ${arr[index] * 123} ")
+    }
 }
 
 fun whileLoop() {

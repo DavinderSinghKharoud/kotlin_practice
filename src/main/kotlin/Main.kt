@@ -4,18 +4,7 @@ import kotlin.math.abs
 Most of the import are by default like collections.....
  */
 fun main() {
-    val person = Person("Davinder Singh", "Kharoud")
-    val person2 = Person("Davinder", "Kharoud", "Singh")
 
-    val location = object {
-        var xPosition = 200
-        var yPosition = 400
-        fun println(){
-            println("Position = ($xPosition $yPosition)")
-        }
-    }
-    println("${location.xPosition}, ${location.yPosition}")
-    location.println()
 }
 
 fun forLoop() {

@@ -33,4 +33,10 @@ interface Vehicle {
 
     fun getDoors(): Int
 
+    companion object {
+        //Not a best practice
+        //Just to show interfaces can have state
+        private val names = mutableMapOf<Any, String>()
+        private val types = mutableMapOf<Any, String>()
+    }
 }

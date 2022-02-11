@@ -1,6 +1,6 @@
 
 //class Person (firstName: String, lastName: String) {
-class Person internal constructor(firstName: String, lastName: String) {
+class Person internal constructor(var firstName: String, var lastName: String) {
     init {
         println("$firstName $lastName")
     }

@@ -1,4 +1,4 @@
-package operator_overloading
+package linkedin_course.operator_overloading
 
 data class Cubic(val num1: Int, val num2: Int, val num3: Int) {
     operator fun plus(other: Cubic): Cubic {

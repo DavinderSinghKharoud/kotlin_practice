@@ -1,3 +1,5 @@
+package linkedin_course.basics
+
 fun main() {
     for (num in 1..105) {
         print("$num: ")

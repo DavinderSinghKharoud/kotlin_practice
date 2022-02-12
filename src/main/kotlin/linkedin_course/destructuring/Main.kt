@@ -1,6 +1,6 @@
-package destructuring
+package linkedin_course.destructuring
 
-import operator_overloading.Position
+import linkedin_course.operator_overloading.Position
 
 fun main() {
     val position = Position(100, 200)

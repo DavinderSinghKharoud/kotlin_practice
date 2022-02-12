@@ -1,3 +1,5 @@
+package linkedin_course.basics
+
 object MySingleton{
     private var temperatures = arrayOf(10, 20, 30)
     fun getLastTemp() = temperatures.last()

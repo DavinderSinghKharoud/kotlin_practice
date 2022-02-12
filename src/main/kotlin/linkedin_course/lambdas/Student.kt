@@ -1,4 +1,4 @@
-package lambdas
+package linkedin_course.lambdas
 
 data class Student(val name: String, val age: Int)
 

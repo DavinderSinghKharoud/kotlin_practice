@@ -1,6 +1,6 @@
-package implementation
+package linkedin_course.implementation
 
-import interfaces.Vehicle
+import linkedin_course.interfaces.Vehicle
 
 class Car : Vehicle {
     override val makeName: String

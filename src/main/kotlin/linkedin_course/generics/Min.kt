@@ -1,4 +1,4 @@
-package generics
+package linkedin_course.generics
 
 fun <T : Comparable<T>> getSmaller(param1: T, param2: T): T {
     val result = param1.compareTo(param2)
@@ -8,7 +8,7 @@ fun <T : Comparable<T>> getSmaller(param1: T, param2: T): T {
 fun main(args: Array<String>) {
     println("getSmaller")
 
-    // Please add the getSmaller function above the main function
+    // Please add the getSmaller function above the linkedin_course.basics.main function
     val minInt: Int = getSmaller(42, 99)
     val minDouble: Double = getSmaller(9.807, 3.14159)
     val minString: String = getSmaller("kitten", "kittens")

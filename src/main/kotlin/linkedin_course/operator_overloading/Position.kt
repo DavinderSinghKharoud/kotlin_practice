@@ -1,4 +1,4 @@
-package operator_overloading
+package linkedin_course.operator_overloading
 
 data class Position(var x: Int, var y: Int) { //Only variables inside the primary constructor are used for equals and Hashcode
     /**

@@ -1,4 +1,4 @@
-package generics
+package linkedin_course.generics
 
 fun main() {
     val maxInt: Int = max(1, 2)

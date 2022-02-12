@@ -1,5 +1,5 @@
-
-//class Person (firstName: String, lastName: String) {
+package linkedin_course.basics
+//class linkedin_course.basics.Person (firstName: String, lastName: String) {
 class Person internal constructor(var firstName: String, var lastName: String) {
     init {
         println("$firstName $lastName")

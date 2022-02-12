@@ -1,9 +1,9 @@
-package abstract
+package linkedin_course.abstract
 
 /**
-Both abstract classes and interfaces:
+Both linkedin_course.abstract classes and linkedin_course.interfaces:
 Can’t be instantiated.
-Define both abstract and regular members.
+Define both linkedin_course.abstract and regular members.
 Define static members.
 Force subclasses to implement a behavior.
  */

@@ -1,3 +1,5 @@
+package linkedin_course.basics
+
 import kotlin.math.abs
 
 /*

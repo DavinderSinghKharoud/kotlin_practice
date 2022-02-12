@@ -1,4 +1,4 @@
-package java_interop
+package linkedin_course.java_interop
 
 import com.Animal
 

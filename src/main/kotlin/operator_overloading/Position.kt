@@ -1,6 +1,6 @@
 package operator_overloading
 
-data class Position(var x: Int, var y: Int) {
+data class Position(var x: Int, var y: Int) { //Only variables inside the primary constructor are used for equals and Hashcode
     /**
      * Operator overloading
      * Expression
@@ -21,6 +21,8 @@ data class Position(var x: Int, var y: Int) {
     operator fun plus(other: Position): Position {
         return Position(other.x + x, other.y + y)
     }
+
+
 }
 
 fun main() {

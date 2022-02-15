@@ -2,6 +2,38 @@ package google_course.convert_to_kotlin
 
 data class User(var firstName: String?, var lastName: String?)
 
+/**
+ * To extend the functionality of a class, either because we don't own the class or because it's not open to inheritance, Kotlin created special declarations called extensions.
+ * Kotlin supports extension functions and extension properties.
+ */
+// extension function
+fun User.getFormattedName(): String {
+    return if (lastName != null) {
+        if (firstName != null) {
+            "$firstName $lastName"
+        } else {
+            lastName ?: "Unknown" //Elvis operator: If variable is not null it will be returned else variable to the right
+        }
+    } else {
+        firstName ?: "Unknown"
+    }
+}
+
+// extension property
+val User.userFormattedName: String
+    get() {
+        return if (lastName != null) {
+            if (firstName != null) {
+                "$firstName $lastName"
+            } else {
+                lastName ?: "Unknown"
+            }
+        } else {
+            firstName ?: "Unknown"
+        }
+    }
+
+
 fun main() {
     val user1 = User("Davinder Singh", "Kharoud")
     val user2 = User("Davinder Singh", "Kharoud")
@@ -10,4 +42,6 @@ fun main() {
 
     println(structurallyEqual)
     println(referentiallyEqual)
+
+    println(user1.getFormattedName())
 }

@@ -14,17 +14,7 @@ object Repository {
 
     val formattedUserNames: List<String>
         get() {
-            return _users.map { user ->
-                if (user.lastName != null) {
-                    if (user.firstName != null) {
-                        "$user.firstName $user.lastName"
-                    } else {
-                        user.lastName ?: "Unknown"
-                    }
-                } else {
-                    user.firstName ?: "Unknown"
-                } //Elvis operator: If variable is not null it will be returned else variable to the right
-            }
+            return _users.map { user -> user.userFormattedName }
         }
 
     //companion object {

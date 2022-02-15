@@ -1,7 +1,5 @@
 package google_course.convert_to_kotlin
 
-import java.util.*
-
 //Singleton
 object Repository {
     private var users = mutableListOf<User>()
@@ -11,19 +9,17 @@ object Repository {
 
     val formattedUserNames: List<String>
         get() {
-            val userNames = ArrayList<String>(users.size)
-            for ((firstName, lastName) in users) {
-                val name: String = if (lastName != null) {
-                    if (firstName != null) {
-                        "$firstName $lastName"
+            return users.map { user ->
+                val name: String = if (user.lastName != null) {
+                    if (user.firstName != null) {
+                        "$user.firstName $user.lastName"
                     } else {
-                        lastName
+                        user.lastName ?: "Unknown"
                     }
-                } else firstName ?: "Unknown" //Elvis operator: If variable is not null it will be returned else variable to the right
-
-                userNames.add(name)
-            }
-            return userNames
+                } else
+                    user.firstName ?: "Unknown" //Elvis operator: If variable is not null it will be returned else variable to the right
+                name
+            }.toList()
         }
 
     //companion object {

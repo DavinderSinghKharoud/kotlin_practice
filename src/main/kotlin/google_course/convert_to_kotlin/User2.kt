@@ -1,13 +1,13 @@
 package google_course.convert_to_kotlin
 
-data class User(var firstName: String?, var lastName: String?)
+data class User2(var firstName: String?, var lastName: String?)
 
 /**
  * To extend the functionality of a class, either because we don't own the class or because it's not open to inheritance, Kotlin created special declarations called extensions.
  * Kotlin supports extension functions and extension properties.
  */
 // extension function
-fun User.getFormattedName(): String {
+fun User2.getFormattedName(): String {
     return if (lastName != null) {
         if (firstName != null) {
             "$firstName $lastName"
@@ -20,7 +20,7 @@ fun User.getFormattedName(): String {
 }
 
 // extension property
-val User.userFormattedName: String
+val User2.userFormattedName: String
     get() {
         return if (lastName != null) {
             if (firstName != null) {
@@ -35,8 +35,8 @@ val User.userFormattedName: String
 
 
 fun main() {
-    val user1 = User("Davinder Singh", "Kharoud")
-    val user2 = User("Davinder Singh", "Kharoud")
+    val user1 = User2("Davinder Singh", "Kharoud")
+    val user2 = User2("Davinder Singh", "Kharoud")
     val structurallyEqual = (user1 == user2) //use variables to compare
     val referentiallyEqual = (user1 === user2) //use hashcode
 
@@ -45,3 +45,9 @@ fun main() {
 
     println(user1.getFormattedName())
 }
+
+/*
+ Java              |        Kotlin
+ equals()                     ==
+ ==                           ===
+ */

@@ -6,6 +6,13 @@ import java.util.List;
 
 public class UseCase {
 
+    /**
+     * @JvmStatic to generate static members and methods.
+     * @JvmOverloads to generate overloaded methods for functions that have default values.
+     * @JvmName to change the name of getters and setters.
+     * @JvmField to expose a property directly as a field, rather than via getters and setters.
+     * @Throws to declare checked exceptions.
+     */
     public static User registerGuest(String name) {
         User guest = new User(Repository.getNextGuestId(), StringUtils.nameToLogin(name), name);
         Repository.addUser(guest);

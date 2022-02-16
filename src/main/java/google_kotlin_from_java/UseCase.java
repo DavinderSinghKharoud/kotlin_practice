@@ -5,6 +5,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UseCase {
+    String a = "H";
+
+    public static void main(String[] args) {
+        UseCase useCase = new UseCase();
+        useCase.a = "b";
+        System.out.println(useCase.a);
+    }
+
     public static User registerGuest(String name) {
         User guest = new User(Repository.getNextGuestId(), StringUtils.nameToLogin(name), name);
         Repository.addUser(guest);
@@ -14,7 +22,6 @@ public class UseCase {
     private void testJvmOverloads() {
         User syrinx = new User(1001, "syrinx");
         User ione = new User(1002, "ione", "Ione Saldana");
-
         List<String> groups = new ArrayList<>();
         groups.add("staff");
 

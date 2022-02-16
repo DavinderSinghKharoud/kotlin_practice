@@ -1,10 +1,10 @@
 package google_kotlin_from_java
 
 data class User @JvmOverloads constructor(
-    val id: Int,
-    val username: String,
-    val displayName: String = username.toTitleCase(),
-    val groups: List<String> = listOf("guest")
+    @JvmField val id: Int,
+    @JvmField val username: String,
+    @JvmField val displayName: String = username.toTitleCase(),
+    @JvmField val groups: List<String> = listOf("guest")
 ) {
     @get: JvmName("hasSystemAccess")
     val hasSystemAccess

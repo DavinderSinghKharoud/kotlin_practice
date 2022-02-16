@@ -4,7 +4,8 @@ import java.io.File
 import java.io.FileNotFoundException
 
 object Repository {
-    val BACKUP_PATH = "/backup/user.repo"
+    //const are primitives, such as int, float, and String
+    const val BACKUP_PATH = "/backup/user.repo"  //'@JvmField' might be used instead of const, but it is a performance overhead
 
     private val _users = mutableListOf<User>()
     private var _nextGuestId = 1000

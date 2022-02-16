@@ -19,7 +19,7 @@ public class UseCase {
         groups.add("staff");
 
         //We cannot skip third parameter in java, but in kotlin we can use named parameters call
-       // User beaulieu = new User(1002, "beaulieu", groups);
+        // User beaulieu = new User(1002, "beaulieu", groups);
     }
 
     public static List<User> getSystemUsers() {

@@ -6,6 +6,8 @@ data class User @JvmOverloads constructor(
     val displayName: String = username.toTitleCase(),
     val groups: List<String> = listOf("guest")
 ) {
+    @get: JvmName("hasSystemAccess")
     val hasSystemAccess
+//        @JvmName("hasSystemAccess")
         get() = "sys" in groups
 }

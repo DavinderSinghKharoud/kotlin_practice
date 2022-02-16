@@ -11,6 +11,17 @@ public class UseCase {
         return guest;
     }
 
+    private void testJvmOverloads() {
+        User syrinx = new User(1001, "syrinx");
+        User ione = new User(1002, "ione", "Ione Saldana");
+
+        List<String> groups = new ArrayList<>();
+        groups.add("staff");
+
+        //We cannot skip third parameter in java, but in kotlin we can use named parameters call
+       // User beaulieu = new User(1002, "beaulieu", groups);
+    }
+
     public static List<User> getSystemUsers() {
         ArrayList<User> systemUsers = new ArrayList<>();
         for (User user : Repository.getUsers()) {

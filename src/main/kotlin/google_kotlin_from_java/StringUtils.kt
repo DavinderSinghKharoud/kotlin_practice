@@ -1,3 +1,4 @@
+@file:JvmName("StringUtils") //This becomes the class name for the java, although class don't exist for this file
 package google_kotlin_from_java
 
 fun String.toTitleCase(): String {

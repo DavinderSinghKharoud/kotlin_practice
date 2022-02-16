@@ -5,13 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UseCase {
-    String a = "H";
-
-    public static void main(String[] args) {
-        UseCase useCase = new UseCase();
-        useCase.a = "b";
-        System.out.println(useCase.a);
-    }
 
     public static User registerGuest(String name) {
         User guest = new User(Repository.getNextGuestId(), StringUtils.nameToLogin(name), name);
@@ -48,8 +41,8 @@ public class UseCase {
             if (!Repository.saveAs(Repository.BACKUP_PATH)) {
                 // TODO: Report error backing up user database.
             }
-        } catch (IOException e) {
-            // Log exception.
+        } catch (IOException ignored) {
+
         }
     }
 }

@@ -1,7 +1,7 @@
 package google_oop
 
 //Need to add open if class can act as parent class( parentClass <-- subClass )
-open class Aquarium(var length: Int = 100, var width: Int = 20, var height: Int = 40) {
+open class Aquarium(var length: Int = 100, var width: Int = 20, open var height: Int = 40) {
 
     open fun printSize() {
         println(
@@ -15,6 +15,9 @@ open class Aquarium(var length: Int = 100, var width: Int = 20, var height: Int 
 fun main() {
     buildAquarium()
 }
+
+class TowerTank(override var height: Int, var diameter: Int) :
+    Aquarium(height = height, width = diameter, length = diameter)
 
 class Fish : Aquarium() {
     override fun printSize() {

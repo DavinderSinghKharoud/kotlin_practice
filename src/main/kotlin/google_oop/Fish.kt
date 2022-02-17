@@ -7,7 +7,7 @@ class Shark : AquariumFish(), FishAction {
     }
 }
 
-class Plecostomus : FishAction, FishColor by GoldColor {
+class Plecostomus(fishColor: FishColor = GoldColor) : FishAction, FishColor by fishColor {
     override fun eat() {
         println("Eat other algae")
     }

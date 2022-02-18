@@ -1,8 +1,20 @@
 package extension_functions
 
 fun main() {
-//    partitions()
-    triples()
+    println(ConstantsTest.NUMBER)
+}
+
+fun listCollections() {
+    val list = listOf("a", "bb", "cc")
+    println(list.sumBy { it.length })
+
+    val map: Map<String, String> =
+        mapOf("white spots" to "Inch") //Use linked hash map in built (performance regression)
+    val hashMap: Map<String, String> = hashMapOf("white spots" to "Inch")
+
+    println(map.getOrDefault("bloating", "sorry, I don't know"))
+    println(map.getOrElse("bloating") { "sorry, I don't know" }) //With lambda
+
 }
 
 fun triples() {
@@ -24,4 +36,10 @@ fun partitions() {
 
 fun isFreshWater(fish: String): Boolean {
     return fish.startsWith("s", true)
+}
+
+class ConstantsTest {
+    companion object {
+        const val NUMBER = 2
+    }
 }

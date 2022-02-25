@@ -40,6 +40,6 @@ fun isFreshWater(fish: String): Boolean {
 
 class ConstantsTest {
     companion object {
-        const val NUMBER = 2
+        const val NUMBER = 2 //compile time
     }
 }

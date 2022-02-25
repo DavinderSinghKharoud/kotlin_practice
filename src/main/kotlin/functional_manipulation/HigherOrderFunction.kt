@@ -19,7 +19,14 @@ fun fishExamples() {
 fun main() {
 //    fishExamples()
 //    println(testRun())
-    testApply()
+//    testApply()
+    testLet()
+}
+
+fun testLet() {
+    //The let() function is similar to apply(), but it returns a copy of the object with the changes. This can be useful for chaining manipulations together.
+    val fish = Fish("splashy").name.capitalize().let { it + "fish" }.length.let { it + 31 }
+    println(fish)
 }
 
 fun testApply() {

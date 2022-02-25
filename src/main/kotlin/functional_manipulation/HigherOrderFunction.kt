@@ -14,9 +14,6 @@ fun fishExamples() {
         println(capitalize())
         toLowerCase()
     }
-
-<<<<<<< HEAD
-
 }
 
 fun main() {
@@ -38,11 +35,5 @@ private fun testRun(): String {
     return fish.run {
         name
     }
-=======
     println(fish)
-}
-
-fun main() {
-    fishExamples()
->>>>>>> origin/master
 }

@@ -15,6 +15,7 @@ fun fishExamples() {
         toLowerCase()
     }
 
+<<<<<<< HEAD
 
 }
 
@@ -37,4 +38,11 @@ private fun testRun(): String {
     return fish.run {
         name
     }
+=======
+    println(fish)
+}
+
+fun main() {
+    fishExamples()
+>>>>>>> origin/master
 }
